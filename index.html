@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text Displayer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Open+Sans&family=Oswald&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!--------------------------------------------------MAIN BODY-------------------------------------------------------->
+   <div id="motherContainer" class="motherContainer">
+
+    <!-------------------------THEMES------------------------------->
+        <div id="theme" class="theme">
+            <button id="themes" class="themes dark-mode-button">
+                <img id="icons" src="icons/moon.svg">
+            </button>
+        </div>
+
+        <!-------------------------INPUT FIELD------------------------------->
+        <div id="container" class="container">
+
+            <div class="inputBox">
+                <input id="input" type="text" placeholder=" write here ">
+                <button id="clickToDisplay" class="clickToDisplay">display</button>
+            </div>
+            
+            <div class="child">
+
+                <!-------------------------OUTPUT COLOR PICK------------------------------->
+                <div id="child01" class="child01">
+                    <label for="color">Color: </label>
+                    <input id="pickColor" type="color" value="#cdd6f4">
+                </div>
+
+                <!-------------------------INPUT FONT FAMILY------------------------------->
+                <div id="child02" class="child02">
+                    <label for="select">Style: </label>
+                     <select id="fontSelection">
+                        <option></option>
+                     </select>
+                </div>
+
+                <!-------------------------INPUT FONT SIZE------------------------------->
+                <div id="child03" class="child03">
+                    <label for="range">Size: </label>
+                    <input 
+                    id="fontSize" 
+                    type="range"
+                    min="10"
+                    max="200">
+                </div>
+
+            </div>
+            
+        </div>
+
+        <!-------------------------OUTPUT DISPLAY HERE------------------------------->
+        <div id="display" class="display">
+            <h3 id="defaultOutput"></h3>
+        </div>
+
+        <div class="lastDev">
+            <button id="copiedTextBtn">copied</button>
+            <button id="copyText" class="copyText"> <img src="icons/copy.svg"></button>
+        </div>
+    
+   </div>
+
+
+    <script src="main.js"></script>
+    <script src="themes.js"></script>
+    <script src="importAPI.js"></script>
+    
+</body>
+</html>

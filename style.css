@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --mainColor: #11111b;
+    --text: #cdd6f4;
+    --subMain: #313244;
+}
+
+.light-mode-button {
+    background-color: var(--text);
+}
+
+.dark-mode-button {
+    background-color: var(--mainColor);
+}
+
+body {
+    background-color: var(--mainColor);
+    color: var(--text);
+    font-family: "Roboto", sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.motherContainer {
+    width: 85%;
+    display: grid;
+    grid-template-rows: repeat(10, 89px);
+    grid-template-columns: repeat(7, 1fr);
+    margin-top: 2%;
+}
+
+.theme {
+    grid-column: 1 / 2;
+    background-color: var(--subMain);
+    border-radius: 10px;
+    height: 65px;
+    border-radius: 30px;
+
+    justify-content: space-evenly;
+}
+
+button {
+    height: 70%;
+    width: 40%;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+button.themes {
+    justify-content: center;
+}
+
+.container {
+    grid-column-start: 1;
+    grid-column-end: 8;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    background-color: var(--subMain);
+    border-radius: 15px;
+
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.child {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.child01,
+.child02,
+.child03 {
+    justify-content: center;
+    background-color: var(--mainColor);
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+input#pickColor {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 70px;
+    height: 50px;
+    cursor: pointer;
+} 
+
+.one,
+.two,
+.three {
+    width: 70%;
+    height: 50px;
+    margin: 5px;
+}
+
+.inputBox {
+    grid-column: 6 / 8;
+    grid-row: 2 / 3; 
+    justify-content: space-between;
+}
+
+input#input {
+    background-color: var(--text);
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    outline: solid 3px rgb(49, 50, 68);
+    color: var(--mainColor);
+    font-size: large;
+    width: 100%;
+    margin-right: 20px
+}
+
+input::placeholder {
+    color: var(--mainColor);
+    font-size: large;
+    font-weight: 100;
+}
+
+#fontSelection {
+    background-color: var(--subMain);
+    color: var(--text);
+    outline: none;
+    border: none;
+    padding: 10px;
+    width: 80px;
+    margin-left: 5px;
+}
+
+input#fontSize {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 4px;
+    background: var(--text);
+}
+input#fontSize::-webkit-slider-thumb {
+    background: red;
+}
+
+.clickToDisplay {
+    background-color: var(--mainColor);
+    color: var(--text);
+    width: 100px;
+    margin-right: 10px;
+}
+
+.display {
+    grid-column-start: 1;
+    grid-column-end: 8;
+    grid-row-start: 5;
+    grid-row-end: 10;
+    background-color: var(--subMain);
+    border-radius: 15px;
+    justify-content: center;
+}
+
+.lastDev {
+    grid-column: 7 / 8;
+    grid-row: 10 / 11;
+    justify-content: space-evenly;
+}
+
+button.copyText {
+    width: 100px;
+    height: 45px;
+    background-color: var(--subMain);
+    justify-content: center;
+}
+
+.theme,
+button.themes,
+.child,
+.child01,
+.child02,
+.child03,
+.inputBox,
+.display,
+.lastDev,
+button.copyText {
+    display: flex;
+    align-items: center;
+}
+
+#copiedTextBtn {
+    visibility: hidden;
+    background-color: transparent;
+    color: var(--text);
+}
