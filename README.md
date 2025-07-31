@@ -14,5 +14,5 @@ This is a simple web application that lets users modify text appearance. You can
 
 - HTML
 - CSS
-- JavaScript (Vanilla)
+- JavaScript
 - [Google Fonts API]
