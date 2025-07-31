@@ -1,7 +1,7 @@
 
 # 🖋️ Text Modifier Web App
 
-This is a simple web application that lets users modify text appearance in real-time. You can adjust font size, colour, and font style using a clean and interactive interface.
+This is a simple web application that lets users modify text appearance. You can adjust font size, colour, and font style using a clean and interactive interface.
 
 ## 🔧 Features
 
