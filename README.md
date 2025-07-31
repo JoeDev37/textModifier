@@ -10,7 +10,7 @@ This is a simple web application that lets users modify text appearance in real-
 - Select from a variety of **font styles** using Google Fonts
 - Toggle between **light mode** and **dark mode**
 
-## 🌐 Technologies Used
+## 🛠️ Built With
 
 - HTML
 - CSS
