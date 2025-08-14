@@ -1,27 +1,26 @@
-
 const googleFontSelection = document.getElementById('fontSelection');
 const defaultGoogleFontOutput = document.getElementById('defaultOutput');
 
 async function importAPI() {
+    const url = `http://localhost:3000/fonts`;
 
-    const apikey = 'AIzaSyBsHj7jSQwCZNBN8iR7YjOh036zVTtZRHQ'
-    const url = `https://www.googleapis.com/webfonts/v1/webfonts?key=${apikey}`;
-
-    try{
+    try {
         const response = await fetch(url);
-        const data = await response.json()
-        
-        if(!response.ok) {
+        const data = await response.json();
+
+        if (!response.ok) {
             throw new Error(`Response Status: ${response.status}`);
         }
 
+        // Populate font dropdown
         data.items.forEach(font => {
-            const option  = document.createElement('option');
+            const option = document.createElement('option');
             option.value = font.family;
             option.textContent = font.family;
-            googleFontSelection.appendChild(option)
-        })
+            googleFontSelection.appendChild(option);
+        });
 
+        // Change font dynamically on selection
         googleFontSelection.addEventListener('change', () => {
             const font = googleFontSelection.value;
             const link = document.createElement('link');
@@ -29,15 +28,13 @@ async function importAPI() {
             link.rel = 'stylesheet';
             document.head.appendChild(link);
 
-            defaultGoogleFontOutput.style.fontFamily = `${font}, sans-serif`
+            defaultGoogleFontOutput.style.fontFamily = `${font}, sans-serif`;
+        });
 
-        })
-
-    }
-    catch(error) {
-        console.error(error.message)
+    } catch (error) {
+        console.error('Failed to load fonts:', error.message);
     }
 }
 
+// Run the function
 importAPI();
-
